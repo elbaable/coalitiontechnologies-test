@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@task');
+Route::post('add-task', 'HomeController@add_task');
+Route::post('update-task', 'HomeController@update_task');
+Route::post('delete-task', 'HomeController@delete_task');
+Route::post('update-priority', 'HomeController@update_priority');
